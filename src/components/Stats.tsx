@@ -1,0 +1,28 @@
+const stats = [
+  { value: "+30", label: "Anos de Experiência", suffix: "" },
+  { value: "5.000", label: "Produtos em Estoque", suffix: "+" },
+  { value: "2.000", label: "Clientes Atendidos", suffix: "+" },
+];
+
+export default function Stats() {
+  return (
+    <section className="bg-[#1C1C1C] py-16 border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-0 lg:divide-x divide-white/10">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="text-center px-6"
+            >
+              <div className="text-4xl md:text-5xl font-black text-gradient mb-2">
+                {stat.value}
+                <span className="text-[#F5C518]">{stat.suffix}</span>
+              </div>
+              <p className="text-sm text-gray-400 font-medium">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
