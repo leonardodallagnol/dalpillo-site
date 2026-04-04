@@ -96,7 +96,7 @@ export default function Hero() {
           </div>
 
           {/* Carousel */}
-          <div className="animate-scale-in delay-200 hidden lg:block">
+          <div className="animate-scale-in delay-200">
             <HeroCarousel />
           </div>
         </div>
