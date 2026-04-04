@@ -23,42 +23,38 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicos" className="py-24 bg-[#111111]">
+    <section id="servicos" className="py-24 bg-[#F8F8F8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#F5C518] text-sm font-bold tracking-[0.25em] uppercase mb-3">
+          <p className="text-[#B8860B] text-sm font-bold tracking-[0.25em] uppercase mb-3">
             O que Oferecemos
           </p>
-          <h2 className="text-4xl md:text-5xl font-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900">
             Serviços feitos para{" "}
             <span className="text-gradient">quem produz</span>
           </h2>
           <div className="section-divider mx-auto mb-6" />
-          <p className="text-gray-400 max-w-xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-xl mx-auto text-lg">
             Muito além de vender peças — somos o parceiro completo do profissional
             que trabalha com metal.
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid sm:grid-cols-3 gap-6">
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
               <div
                 key={i}
-                className="group bg-[#1C1C1C] rounded-2xl p-6 border border-white/5 hover:border-[#F5C518]/20 card-hover"
+                className="group bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#F5C518]/50 card-hover shadow-sm"
               >
-                {/* Icon */}
-                <div className="w-12 h-12 bg-[#F5C518]/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#F5C518]/20 transition-colors">
-                  <Icon size={22} className="text-[#F5C518]" />
+                <div className="w-12 h-12 bg-[#F5C518]/15 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#F5C518]/25 transition-colors">
+                  <Icon size={22} className="text-[#D4A017]" />
                 </div>
-
-                <h3 className="text-lg font-bold mb-2 group-hover:text-[#F5C518] transition-colors">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 group-hover:text-[#B8860B] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>
